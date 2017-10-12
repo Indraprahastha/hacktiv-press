@@ -18,8 +18,10 @@ mongoose.connect(uri);
 var db = mongoose.connection;
 
 let user = require('./routers/user.js')
+let artikel = require('./routers/artikel.js')
 
 app.use('/user',user)
+app.use('/artikel',artikel)
 
 app.listen(process.env.PORT || 3000, function(){
   console.log('HACKTIV-PRESS Jalan');
