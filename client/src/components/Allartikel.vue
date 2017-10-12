@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div class="list-group" v-for="artikel in artikel">
-      <a href="#" class="list-group-item"> {{artikel.title}} </a>
+    <div class="list-group" v-for="artikels in artikel">
+      <a href="#" class="list-group-item"> {{artikels.title}} </a>
     </div>
   </div>
 </template>
@@ -27,7 +27,6 @@ export default {
   created () {
     // dijalankan ketika pertamakali komponen di load
     this.dapatkanArtikel()
-    console.log('-----------')
   }
 }
 </script>

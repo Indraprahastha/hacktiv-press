@@ -3,7 +3,7 @@ let router = express.Router()
 let artikel = require('../controllers/artikel')
 let helper = require('../helpers/helper.js')
 
-router.get('/all',artikel.getArtikel)
+router.get('/semua',artikel.getArtikel)
 router.post('/',artikel.addArtikel)
 router.get('/:id',artikel.findArtikel)
 router.put('/:id',artikel.editArtikel)

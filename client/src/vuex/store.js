@@ -9,7 +9,7 @@ const http = axios.create({
 Vue.use(Vuex)
 
 const state = {
-  artikel = []
+  artikel: []
 }
 
 const mutations = {
@@ -21,10 +21,10 @@ const mutations = {
 
 const actions = {
   dapatkanArtikel ({commit}) {
-    http.get('/artikel/all')
+    http.get('/artikel/semua')
     .then(({data}) => {
-      console.log('data di actions----------> ', data)
       commit('setArtikel', data)
+      console.log(data)
     })
     .catch((err) => {
       console.log(err)
